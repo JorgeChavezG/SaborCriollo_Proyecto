@@ -50,6 +50,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="Nombre Usuario:"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtview_tituloregistro" />
 
@@ -71,6 +72,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="Correo:"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_usuario" />
 
@@ -92,6 +94,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="Contraseña:"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_correo" />
 
@@ -113,6 +116,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:text="Leer Términos y Condiciones"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_contrasena" />
 

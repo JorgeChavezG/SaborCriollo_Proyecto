@@ -2,7 +2,17 @@
     <string name="app_name">SaborCriollo_Proyecto</string>
     <string name="bienvenido">BIENVENIDO</string>
     <string name="IniSesion">Iniciar Sesion con tu usuario</string>
-    <string name="txt_usuario">Coloque usuario</string>
-    <string name="txt_correo">Coloque correo</string>
-    <string name="txt_contrasena">Coloque contraseña</string>
+    <string name="txt_usuario">Ingrese usuario</string>
+    <string name="txt_correo">Ingrese correo</string>
+    <string name="txt_contrasena">Ingrese contraseña</string>
+    <string name="txt_nombre">Ingrese nombre del cliente</string>
+    <string name="txt_restaurante">Seleccione restaurante</string>
+    <string name="txt_fecha">Seleccione fecha</string>
+    <string name="txt_hora">Seleccione hora</string>
+    <string name="txt_personas">Seleccione cantidad de personas</string>
+    <string name="txt_cliente">Ingrese nombre del cliente</string>
+    <string name="txt_subtotal">Ingrese sub-total</string>
+    <string name="txt_igv">Ingrese IGV</string>
+    <string name="txt_totalventa">Ingrese total de venta</string>
+    <string name="txt_metodopago">Seleccione método de pago</string>
 </resources>
