@@ -4,13 +4,13 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tb_Producto")
-class Producto (
+@Entity(tableName = "tb_Precio")
+class Precio (
 
     @PrimaryKey
+    @ColumnInfo(name = "idPrecio") val idPrecio: Int,
     @ColumnInfo(name = "idProducto") val idProducto: Int,
-    @ColumnInfo(name = "descripcion") val descripcion: String,
     @ColumnInfo(name = "idCategoria") val idCategoria: Int,
-    @ColumnInfo(name = "stock") val stock: Int
-):java.io.Serializable {
+    @ColumnInfo(name = "precioUnitario") val precioUnitario: Int
+    ):java.io.Serializable {
 }
