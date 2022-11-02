@@ -4,16 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+<<<<<<< HEAD
+=======
 import androidx.navigation.ui.navigateUp
+>>>>>>> dd7e654a96c36350fba0e3832ae095aa7b58dbd2
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.navigateUp
+import androidx.room.Room
 import pe.com.saborcriollo_proyecto.R
 import pe.com.saborcriollo_proyecto.databinding.ActivityMainBinding
+import pe.com.saborcriollo_proyecto.room.BDSaborCriollo
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding : ActivityMainBinding
+
+    val room= Room.databaseBuilder(this, BDSaborCriollo::class.java,"Producto").build()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

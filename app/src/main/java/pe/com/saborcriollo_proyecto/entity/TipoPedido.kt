@@ -5,21 +5,19 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tb_Producto",
+@Entity(tableName = "tb_TipoPedido",
     foreignKeys = [
-        ForeignKey(entity = Categoria::class,
+        ForeignKey(entity = PrecioDelivery::class,
             parentColumns = ["name"],
-            childColumns = ["idCategoria"])
+            childColumns = ["idDelivery"])
     ])
-class Producto (
+class TipoPedido (
     @PrimaryKey
-    @ColumnInfo(name = "idProducto")
-    val idProducto: Int,
+    @ColumnInfo(name = "idTipoPedido")
+    val idTipoPedido: Int,
     @ColumnInfo(name = "descripcion")
     val descripcion: String,
-    @ColumnInfo(name = "idCategoria") /*foreign key*/
-    val idCategoria: Int,
-    @ColumnInfo(name = "stock")
-    val stock: Int
+    @ColumnInfo(name = "idDelivery") /*foreign key*/
+    val idDelivery: Int
 ):java.io.Serializable {
 }

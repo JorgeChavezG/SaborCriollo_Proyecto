@@ -4,12 +4,11 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tb_TipoComprobante")
-class TipoComprobante (
+@Entity
+class TipoDocumento (
     @PrimaryKey
-    @ColumnInfo(name = "TipoComprobante")
-    val TipoComprobante: String,
+    @ColumnInfo(name = "idTipoDocumento")
+    val idTipoDocumento: Int,
     @ColumnInfo(name = "descripcion")
     val descripcion: String
-
 )
