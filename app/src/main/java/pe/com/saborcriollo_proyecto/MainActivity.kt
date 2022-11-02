@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
-import pe.com.fragment.databinding.ActivityMainBinding
+import androidx.navigation.ui.setupActionBarWithNavController
 import pe.com.saborcriollo_proyecto.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
