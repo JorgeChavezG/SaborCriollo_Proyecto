@@ -2,4 +2,7 @@
     <string name="app_name">SaborCriollo_Proyecto</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_usuario">Coloque usuario</string>
+    <string name="txt_correo">Coloque correo</string>
+    <string name="txt_contrasena">Coloque contraseña</string>
 </resources>

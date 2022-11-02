@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
+<<<<<<< HEAD
+=======
+import androidx.navigation.ui.navigateUp
+>>>>>>> dd7e654a96c36350fba0e3832ae095aa7b58dbd2
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.navigateUp
 import androidx.room.Room
