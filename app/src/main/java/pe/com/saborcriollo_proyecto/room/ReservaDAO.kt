@@ -12,10 +12,10 @@ interface ReservaDAO {
     @Query("select * from tb_Reserva where idReserva= :idReserva")
     fun obtenerReservaById(idReserva: Int): Reserva
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun RegistrarReserva()
 
-    @Update
+    @Update(onConflict = OnConflictStrategy.IGNORE)
     fun ActualizarReserva(telefono: String,
                           fechaReserva: String,
                           horaReserva:Int,
