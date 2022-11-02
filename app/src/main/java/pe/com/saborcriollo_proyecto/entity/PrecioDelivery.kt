@@ -5,25 +5,18 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tb_Local",
+@Entity(tableName = "tb_PrecioDelivery",
     foreignKeys = [
         ForeignKey(entity = Ubigeo::class,
             parentColumns = ["name"],
             childColumns = ["cod_Ubigeo"])
     ])
-class Local (
+class PrecioDelivery (
     @PrimaryKey
-    @ColumnInfo(name = "idLocal")
-    val idLocal: Int,
-    @ColumnInfo(name = "nombre")
-    val nombre: String,
+    @ColumnInfo(name = "idDelivery")
+    val idDelivery: Int,
     @ColumnInfo(name = "cod_Ubigeo") /*foreign key*/
     val cod_Ubigeo: String,
-    @ColumnInfo(name = "direccion")
-    val direccion: String,
-    @ColumnInfo(name = "telefono")
-    val telefono: String,
-    @ColumnInfo(name = "horarioAtencion")
-    val horarioAtencion: String
-):java.io.Serializable {
-}
+    @ColumnInfo(name = "Costo")
+    val Costo: Double
+)
