@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Proyecto_DAM_SaborCriollo/SaborCriollo_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Proyecto_DAM_SaborCriollo/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_login.xml" value="0.33" />
+        <entry key="..\:/Proyecto_DAM_SaborCriollo/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_pago.xml" value="0.17074275362318841" />
+        <entry key="..\:/Proyecto_DAM_SaborCriollo/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_registro.xml" value="0.15416666666666667" />
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.16077898550724637" />
       </map>
     </option>
