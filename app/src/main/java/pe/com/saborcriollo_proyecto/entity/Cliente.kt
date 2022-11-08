@@ -10,7 +10,7 @@ import androidx.room.PrimaryKey
             ForeignKey(entity = TipoDocumento::class,
                         parentColumns = ["name"],
                         childColumns = ["idTipoDocumento"]),
-            ForeignKey(entity = Ubigeo::class,
+             ForeignKey(entity = Ubigeo::class,
                 parentColumns = ["name"],
                 childColumns = ["cod_Ubigeo"])
         ])

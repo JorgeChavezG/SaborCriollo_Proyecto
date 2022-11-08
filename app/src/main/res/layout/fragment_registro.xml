@@ -7,7 +7,7 @@
     tools:context=".ui.adapter.RegistroFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_return"
+        android:id="@+id/btn_retorno_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -15,7 +15,8 @@
         android:clickable="true"
         android:src="@android:drawable/ic_menu_revert"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/img_logo_login"
@@ -24,10 +25,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:src="@drawable/img_logo_sabor_criollo"
+        app:layout_constraintBottom_toTopOf="@+id/txtview_tituloregistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_return" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_retorno_1"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/txtview_tituloregistro"
@@ -36,78 +40,57 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Crear Cuenta"
+        android:text="@string/crear_cuenta"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_login" />
 
-    <TextView
-        android:id="@+id/txtview_usuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:text="Nombre Usuario:"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_tituloregistro" />
-
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txt_usuario"
+        android:id="@+id/id_nombre_usuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/nombre_usuario"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_usuario" />
-
-    <TextView
-        android:id="@+id/txtview_correo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:text="Correo:"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_usuario" />
+        app:layout_constraintTop_toBottomOf="@+id/txtview_tituloregistro" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txt_correo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/correo"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_contrasena"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_correo" />
-
-    <TextView
-        android:id="@+id/txtview_contrasena"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:text="Contraseña:"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_correo" />
+        app:layout_constraintTop_toBottomOf="@+id/id_nombre_usuario" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/txt_contrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/contraseña"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_terminos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_contrasena" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_correo" />
 
     <CheckBox
         android:id="@+id/checkBox_terminos"
@@ -115,8 +98,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="8dp"
         android:text="Leer Términos y Condiciones"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_registrar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_contrasena" />
 
@@ -138,9 +125,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
         android:src="@drawable/img_facebook"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_registrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_registrar"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <ImageButton
         android:id="@+id/btn_twitter"
@@ -150,6 +139,8 @@
         android:layout_marginEnd="140dp"
         android:src="@drawable/img_twitter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_registrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_registrar"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
