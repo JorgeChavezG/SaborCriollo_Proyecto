@@ -1,16 +1,15 @@
 package pe.com.saborcriollo_proyecto.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "tb_Reserva",
     foreignKeys = [
         ForeignKey(entity = Local::class,
             parentColumns = ["name"],
             childColumns = ["idLocal"])
-    ])
+    ],
+    indices = [
+        Index(value = ["idLocal"])])
 class Reserva (
     @PrimaryKey
     @ColumnInfo(name = "idReserva")

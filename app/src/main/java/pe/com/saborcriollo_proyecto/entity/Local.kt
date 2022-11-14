@@ -1,16 +1,16 @@
 package pe.com.saborcriollo_proyecto.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "tb_Local",
     foreignKeys = [
         ForeignKey(entity = Ubigeo::class,
             parentColumns = ["name"],
             childColumns = ["cod_Ubigeo"])
-    ])
+    ],
+    indices = [
+        Index(value = ["cod_Ubigeo"])]
+)
 class Local (
     @PrimaryKey
     @ColumnInfo(name = "idLocal")

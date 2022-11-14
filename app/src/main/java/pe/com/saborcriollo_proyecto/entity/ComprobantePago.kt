@@ -1,9 +1,6 @@
 package pe.com.saborcriollo_proyecto.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "tb_ComprobantePago",
         foreignKeys = [
@@ -17,6 +14,9 @@ import androidx.room.PrimaryKey
                 parentColumns = ["name"],
                 childColumns = ["idTipoPedido"])
         ],
+        indices = [
+            Index(value = ["idPedido"]),
+            Index(value = ["idTipoPedido"])],
         primaryKeys = ["TipoComprobante","NumComprobante"])
 class ComprobantePago (
     @ColumnInfo(name = "TipoComprobante") /*foreign key*/

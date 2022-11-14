@@ -1,16 +1,16 @@
 package pe.com.saborcriollo_proyecto.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "tb_Usuario",
     foreignKeys = [
         ForeignKey(entity = TipoDocumento::class,
             parentColumns = ["name"],
-            childColumns = ["idTipoDocumento"])
-    ])
+            childColumns = ["idTipoDocumento"],
+        )
+    ],
+    indices = [
+        Index(value = ["idTipoDocumento"])])
 class Usuario (
     @PrimaryKey
     @ColumnInfo(name = "idUsuario")
