@@ -1,24 +1,24 @@
 package pe.com.saborcriollo_proyecto.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "tb_ComprobantePago",
-    foreignKeys = [
-        ForeignKey(entity = TipoComprobante::class,
-            parentColumns = ["name"],
-            childColumns = ["TipoComprobante"]),
-        ForeignKey(entity = Pedido::class,
-            parentColumns = ["name"],
-            childColumns = ["idPedido"]),
-        ForeignKey(entity = TipoPedido::class,
-            parentColumns = ["name"],
-            childColumns = ["idTipoPedido"])
-    ])
+        foreignKeys = [
+            ForeignKey(entity = TipoComprobante::class,
+                parentColumns = ["name"],
+                childColumns = ["TipoComprobante"]),
+            ForeignKey(entity = Pedido::class,
+                parentColumns = ["name"],
+                childColumns = ["idPedido"]),
+            ForeignKey(entity = TipoPedido::class,
+                parentColumns = ["name"],
+                childColumns = ["idTipoPedido"])
+        ],
+        indices = [
+            Index(value = ["idPedido"]),
+            Index(value = ["idTipoPedido"])],
+        primaryKeys = ["TipoComprobante","NumComprobante"])
 class ComprobantePago (
-    /*Pendiente crear primary key con dos variables*/
     @ColumnInfo(name = "TipoComprobante") /*foreign key*/
     val TipoComprobante: String,
     @ColumnInfo(name = "NumComprobante")
@@ -33,6 +33,5 @@ class ComprobantePago (
     val igv: Double,
     @ColumnInfo(name = "ImporteTotal")
     val ImporteTotal: Double
-    /*primary key (TipoComprobante,NumComprobante)*/
 ):java.io.Serializable {
 }

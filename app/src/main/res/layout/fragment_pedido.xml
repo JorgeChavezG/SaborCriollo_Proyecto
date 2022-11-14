@@ -7,15 +7,18 @@
     tools:context=".ui.adapter.PedidoFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_return"
+        android:id="@+id/btn_retorno_1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:clickable="true"
+        android:contentDescription="TODO"
+        android:focusable="true"
         android:src="@android:drawable/ic_menu_revert"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/img_plato"
@@ -27,7 +30,9 @@
         android:src="@drawable/img_cubiertos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_return" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_retorno_1"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/txtview_titulopedido"
@@ -36,7 +41,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="200dp"
-        android:text="Promociones"
+        android:text="@string/Promociones"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -51,7 +56,9 @@
         android:layout_marginTop="24dp"
         android:src="@drawable/img_pollobrasa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_titulopedido" />
+        app:layout_constraintTop_toBottomOf="@+id/txtview_titulopedido"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/txt_pollobrasa"
@@ -60,7 +67,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
-        android:text="Pollo a la brasa entero con papas y ensalada Precio: S/.49.90"
+        android:text="@string/pollo_a_la_brasa_entero_con_papas_y_ensalada_precio_s_49_90"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_pollobrasa"
@@ -73,7 +80,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
-        android:text="Agregar al carrito"
+        android:text="@string/btn_AgregarAlCarrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_pollobrasa"
         app:layout_constraintTop_toBottomOf="@+id/txt_pollobrasa" />
@@ -86,7 +93,8 @@
         android:layout_marginTop="64dp"
         android:src="@drawable/img_comidacriolla"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_pollobrasa" />
+        app:layout_constraintTop_toBottomOf="@+id/img_pollobrasa"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/txt_comidacriolla"
@@ -95,7 +103,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="40dp"
-        android:text="Menú criollo (L-V) Precio: S/.12.90"
+        android:text="@string/men_criollo_l_v_precio_s_12_90"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_comidacriolla"
@@ -108,7 +116,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
-        android:text="Agregar al carrito"
+        android:text="@string/btn_AgregarAlCarrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_comidacriolla"
         app:layout_constraintTop_toBottomOf="@+id/txt_comidacriolla" />
@@ -119,7 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="80dp"
-        android:text="Finalizar compra"
+        android:text="@string/btn_FinalizarCompra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_carrito2" />
 
@@ -130,7 +138,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
-        android:text="Confirmar"
+        android:text="@string/Confirmar"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_comprar"
         app:layout_constraintStart_toStartOf="parent"
