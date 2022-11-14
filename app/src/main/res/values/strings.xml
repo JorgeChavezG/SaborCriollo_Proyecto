@@ -11,9 +11,9 @@
     <string name="ingreso">Ingresar</string>
     <string name="registro">Registrarse</string>
 
-    <string name="txt_usuario">Ingrese usuario</string>
-    <string name="txt_correo">Ingrese correo</string>
-    <string name="txt_contrasena">Ingrese contraseña</string>
+    <string name="txt_usuario2">Ingrese usuario</string>
+    <string name="txt_correos2">Ingrese correo</string>
+    <string name="txt_contrasena2">Ingrese contraseña</string>
     <string name="txt_nombre">Ingrese nombre del cliente</string>
     <string name="txt_restaurante">Seleccione restaurante</string>
     <string name="txt_fecha">Seleccione fecha</string>
