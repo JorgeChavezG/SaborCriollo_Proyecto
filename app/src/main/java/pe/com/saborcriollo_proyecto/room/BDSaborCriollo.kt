@@ -18,11 +18,16 @@ import pe.com.saborcriollo_proyecto.entity.*
                 Producto::class,
                 Reserva::class,
                 TipoComprobante::class,
+                TipoPedido::class,
+                TipoDocumento::class,
+                MetodoPago::class,
+                PrecioDelivery::class,
                 Ubigeo::class,
                 Usuario::class], version = 1
 )
 abstract class BDSaborCriollo : RoomDatabase(){
     abstract fun pedidoDao(): PedidoDAO
+
 
 
     companion object{

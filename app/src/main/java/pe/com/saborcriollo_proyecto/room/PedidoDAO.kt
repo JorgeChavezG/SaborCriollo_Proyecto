@@ -1,12 +1,11 @@
 package pe.com.saborcriollo_proyecto.room
 
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 import pe.com.saborcriollo_proyecto.entity.Pedido
 
+
+@Dao
 interface PedidoDAO {
     @Query("select *from tb_Pedido")
     fun obtenerPedido(): Flow<List<Pedido>>

@@ -20,7 +20,7 @@ import androidx.room.PrimaryKey
             parentColumns = ["name"],
             childColumns = ["cod_Ubigeo"])
     ])
-class Pedido(
+ class Pedido(
     @PrimaryKey
     @ColumnInfo(name = "idPedido")
     val idPedido: Int = 0,

@@ -7,7 +7,11 @@ class PedidoRepositorio (private val dao: PedidoDAO){
 
     val todosLosPedidos = dao.obtenerPedido()
 
-    /*suspend fun insertar(pedido: Pedido) {
-        dao.RegistrarPedido(pedido)
+  /*  suspend fun insertar(producto:PedidoDAO ){
+        dao.RegistrarPedido(idTipoPedido = 1, fechaHoraPedido = "19", totalPedido = 1, idMetodoPago = 1,
+        cod_Ubigeo = "10", direccionPedido = "19", estado = 1)
+
+
+
     }*/
 }
