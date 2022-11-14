@@ -13,7 +13,7 @@ import pe.com.saborcriollo_proyecto.entity.*
                 ComprobantePago::class,
                 DetallePedido::class,
                 Local::class,
-                PedidoDAO::class,
+                Pedido::class,
                 Precio::class,
                 Producto::class,
                 Reserva::class,
@@ -22,7 +22,7 @@ import pe.com.saborcriollo_proyecto.entity.*
                 Usuario::class], version = 1
 )
 abstract class BDSaborCriollo : RoomDatabase(){
-    abstract fun ClienteDAO(): ClienteDAO
+    abstract fun pedidoDao(): PedidoDAO
 
 
     companion object{

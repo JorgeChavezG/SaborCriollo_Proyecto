@@ -81,6 +81,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:text="@string/btn_AgregarAlCarrito"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_pollobrasa"
         app:layout_constraintTop_toBottomOf="@+id/txt_pollobrasa" />
@@ -117,6 +118,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:text="@string/btn_AgregarAlCarrito"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/img_comidacriolla"
         app:layout_constraintTop_toBottomOf="@+id/txt_comidacriolla" />
@@ -128,6 +130,7 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="80dp"
         android:text="@string/btn_FinalizarCompra"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_carrito2" />
 
