@@ -9,7 +9,6 @@ import pe.com.saborcriollo_proyecto.entity.*
 
 @Database(
     entities = [Categoria::class,
-                Cliente::class,
                 ComprobantePago::class,
                 DetallePedido::class,
                 Local::class,

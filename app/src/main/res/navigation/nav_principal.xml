@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="pe.com.saborcriollo_proyecto.ui.adapter.LoginFragment"
+        android:name="pe.com.saborcriollo_proyecto.ui.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>

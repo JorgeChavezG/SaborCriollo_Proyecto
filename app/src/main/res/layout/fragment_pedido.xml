@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.adapter.PedidoFragment">
+    tools:context=".ui.fragment.PedidoFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_retorno_1"
@@ -128,23 +128,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/btn_FinalizarCompra"
         android:clickable="true"
+        android:text="@string/btn_DetallePedido"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_carrito2" />
 
-    <CheckBox
-        android:id="@+id/checkBox_compra"
+    <Button
+        android:id="@+id/btn_listarreserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/Confirmar"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_comprar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_comidacriolla" />
+        android:text="@string/btn_ListarReserva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toEndOf="@+id/btn_retorno_1"
+        tools:layout_editor_absoluteY="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
