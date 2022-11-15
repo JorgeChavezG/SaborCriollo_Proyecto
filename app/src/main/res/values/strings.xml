@@ -1,8 +1,9 @@
 <resources>
+    <!-- etiquetas en registro-->
+    <string name="terminoCondiciones">Leer Términos y Condiciones</string>
     <string name="app_name">SaborCriollo_Proyecto</string>
     <string name="bienvenido">BIENVENIDO</string>
     <string name="IniSesion">Iniciar Sesion con tu usuario</string>
-
     <string name="txt_usuario1">Coloque usuario</string>
     <string name="correo">Correo:</string>
     <string name="txt_correo">Coloque correo</string>
@@ -10,7 +11,6 @@
     <string name="coloque_contrasena1">Coloque contraseña</string>
     <string name="ingreso">Ingresar</string>
     <string name="registro">Registrarse</string>
-
     <string name="txt_usuario2">Ingrese usuario</string>
     <string name="txt_correos2">Ingrese correo</string>
     <string name="txt_contrasena2">Ingrese contraseña</string>
@@ -28,21 +28,14 @@
     <string name="txt_totalventa">Ingrese total de venta</string>
     <string name="txt_metodopago">Seleccione método de pago</string>
 
-
     <!--     Titulos -->
-
     <string name="nombre_usuario">Nombre Usuario</string>
-
-
     <string name="crear_cuenta">Crear Cuenta</string>
     <string name="Correo2">Correo:</string>
     <string name="btn_retornar">retornar</string>
 
-
     <!--     etiquetas reserva  -->
-
     <string name="ReservaTitulo">Reservas</string>
-
     <string name="Detallesdetureserva">Detalles de tu reserva</string>
     <string name="Codigo">Codigo:</string>
     <string name="Nombre">Nombre:</string>
@@ -50,30 +43,19 @@
     <string name="Fecha">Fecha:</string>
     <string name="Hora">Hora:</string>
     <string name="Personas">Personas:</string>
-
     <string name="CompartirReserva">Compartir Reserva</string>
     <string name="EditarReserva">Editar Reserva</string>
     <string name="CancerlarReserva">Cancelar Reserva</string>
     <string name="imagenreserva">ImagenReserva</string>
     <string name="btn_reserva">btn_reserva</string>
 
-
     <!--     etiquetas Pedido  -->
-
-<<<<<<< HEAD
     <string name="Promociones">Promociones</string>
     <string name="Confirmar">Confirmar</string>
     <string name="btn_AgregarAlCarrito">Agregar al Carrito</string>
     <string name="btn_FinalizarCompra">Finalizar Compra</string>
     <string name="pollo_a_la_brasa_entero_con_papas_y_ensalada_precio_s_49_90">Pollo a la brasa entero con papas y ensalada Precio: S/.49.90</string>
-=======
-        <string name="Promociones">Promociones</string>
-        <string name="Confirmar">Confirmar</string>
-        <string name="btn_AgregarAlCarrito">Agregar Al Carrito</string>
-        <string name="btn_FinalizarCompra">Finalizar Compra</string>
-        <string name="pollo_a_la_brasa_entero_con_papas_y_ensalada_precio_s_49_90">Pollo a la brasa entero con papas y ensalada Precio: S/.49.90</string>
     <string name="Generar_Reserva">Generar Reserva</string>
->>>>>>> 309933037c3092a0d3b2a08db2b6b544586c2629
 
     <!--     etiquetas DetallePedido  -->
     <string name="Pedido">Pedido</string>
@@ -81,7 +63,6 @@
     <string name="btn_EliminarPedido">Eliminar Pedido</string>
     <string name="btn_Pagar">Pagar</string>
 
-<<<<<<< HEAD
     <!--     etiquetas Pago  -->
     <string name="DatosDelPago">Datos del pago</string>
     <string name="DetallesDeTuPago">Detalles de tu pago</string>
@@ -96,22 +77,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
-=======
-        <!--     etiquetas Pago  -->
-        <string name="DatosDelPago">Datos del pago</string>
-        <string name="DetallesDeTuPago">Detalles de tu pago</string>
-        <string name="Cliente">Cliente:</string>
-        <string name="Sub_total">Sub-Total</string>
-        <string name="IGV">I.G.V:</string>
-        <string name="TotalVentas">Total de ventas</string>
-        <string name="MetodoDePago">Método de pago</string>
-        <string name="btn_ConfimarPago">Confirmar Pago</string>
-        <string name="btn_AnularPago">Anular Pago</string>
-        <string name="men_criollo_l_v_precio_s_12_90">Menú criollo (L-V) Precio: S/.12.90</string>
 
 
-    <!-- etiquetas en registro-->
 
-    <string name="terminoCondiciones">Leer Términos y Condiciones</string>
-    </resources>
->>>>>>> 309933037c3092a0d3b2a08db2b6b544586c2629
+

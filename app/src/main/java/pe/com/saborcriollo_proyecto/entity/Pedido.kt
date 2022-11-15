@@ -40,12 +40,5 @@ import androidx.room.PrimaryKey
     val direccionPedido: String,
     @ColumnInfo(name = "estado")
     val estado: Int
-) {
-    override fun toString(): String {
-        return "Pedido(idPedido=$idPedido, idCliente=$idCliente, idTipoPedido=$idTipoPedido, " +
-                " fechaHoraPedido=$fechaHoraPedido, totalPedido=$totalPedido ,idMetodoPago=$idMetodoPago, " +
-                " cod_Ubigeo='$cod_Ubigeo', direccionPedido='$direccionPedido', estado=$estado)"
-    }
+):java.io.Serializable {
 }
-/*):java.io.Serializable {
-}*/

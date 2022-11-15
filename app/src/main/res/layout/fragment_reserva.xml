@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp"
     android:foregroundTint="#2196F3"
-    tools:context=".ui.adapter.ReservaFragment">
+    tools:context=".ui.fragment.ReservaFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_retorno_1"
