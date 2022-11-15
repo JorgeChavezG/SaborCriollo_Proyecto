@@ -5,56 +5,67 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import pe.com.saborcriollo_proyecto.R
+import androidx.fragment.app.viewModels
+import pe.com.saborcriollo_proyecto.databinding.FragmentPedidoBinding
+import pe.com.saborcriollo_proyecto.entity.Pedido
+import pe.com.saborcriollo_proyecto.ui.viewmodel.PedidoApplication
+import pe.com.saborcriollo_proyecto.ui.viewmodel.PedidoViewModel
+import pe.com.saborcriollo_proyecto.ui.viewmodel.ViewModelFactory
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [PedidoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class PedidoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private var _binding: FragmentPedidoBinding? = null
+    val binding get() = _binding!!
+
+    private val pedidoViewModel: PedidoViewModel by viewModels {
+
+        val saborcriolloApp = requireActivity().application as PedidoApplication
+
+        ViewModelFactory(saborcriolloApp.repository)
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pedido, container, false)
+        _binding = FragmentPedidoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment PedidoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            PedidoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        pedidoViewModel.todoPedidos.observe(viewLifecycleOwner) { lista ->
+            println("CAMBIA LA INFORMACION")
+            for (obj in lista) {
+                println(obj.toString())
             }
+        }
+
+        binding.btnRetorno1.setOnClickListener {
+        }
+
+        binding.btnCarrito1.setOnClickListener {
+            val pedido = Pedido(idCliente = 1, idTipoPedido = 1, fechaHoraPedido = "2022-09-05 12:30:00",
+                totalPedido = 60.80, idMetodoPago = 1, cod_Ubigeo = "001", direccionPedido = "Calle Los Alhelies 341", estado = 1)
+            pedidoViewModel.inserta(pedido)
+        }
+
+        binding.btnCarrito2.setOnClickListener {
+            val pedido = Pedido(idCliente = 2, idTipoPedido = 2, fechaHoraPedido = "2022-08-04 11:35:00",
+                totalPedido = 37.80, idMetodoPago = 2, cod_Ubigeo = "002", direccionPedido = "Calle Los Geranios 221", estado = 2)
+            pedidoViewModel.inserta(pedido)
+        }
+
+        binding.btnComprar.setOnClickListener {
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

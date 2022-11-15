@@ -4,11 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.16077898550724637" />
+<<<<<<< HEAD
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_login.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_pago.xml" value="0.1" />
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_pedido.xml" value="0.1" />
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_registro.xml" value="0.33" />
         <entry key="..\:/Users/Jorge Chavez Gue/Documents/5TO CICLO/DESARROLLO DE APLICACIONES MOVILES I/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_reserva.xml" value="0.2" />
+=======
+        <entry key="..\:/Users/franq/Desktop/PROYECTO_DAM1/SaborCriollo_Proyecto/app/src/main/res/layout/activity_main.xml" value="0.3188405797101449" />
+        <entry key="..\:/Users/franq/Desktop/PROYECTO_DAM1/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/franq/Desktop/PROYECTO_DAM1/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_pago.xml" value="0.264" />
+        <entry key="..\:/Users/franq/Desktop/PROYECTO_DAM1/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_pedido.xml" value="0.3188405797101449" />
+        <entry key="..\:/Users/franq/Desktop/PROYECTO_DAM1/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_registro.xml" value="0.3188405797101449" />
+        <entry key="..\:/Users/franq/Desktop/PROYECTO_DAM1/SaborCriollo_Proyecto/app/src/main/res/layout/fragment_reserva.xml" value="0.264" />
+>>>>>>> bf728291d3ce95a088e49deb82ca69f3569dd678
       </map>
     </option>
   </component>

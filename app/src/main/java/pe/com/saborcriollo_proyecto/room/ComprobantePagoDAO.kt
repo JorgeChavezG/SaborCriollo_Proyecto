@@ -1,12 +1,11 @@
 package pe.com.saborcriollo_proyecto.room
-
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import  androidx.room.Dao
+import androidx.room.*
 import pe.com.saborcriollo_proyecto.entity.ComprobantePago
 import pe.com.saborcriollo_proyecto.entity.Pedido
 
+
+@Dao
 interface  ComprobantePagoDAO {
     @Query("select *from tb_comprobantepago")
     fun obtenerComprobantePago():List<ComprobantePago>

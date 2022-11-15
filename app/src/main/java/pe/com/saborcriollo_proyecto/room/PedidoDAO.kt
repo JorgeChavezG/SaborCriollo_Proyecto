@@ -1,21 +1,34 @@
 package pe.com.saborcriollo_proyecto.room
 
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 import pe.com.saborcriollo_proyecto.entity.Pedido
-import pe.com.saborcriollo_proyecto.entity.Reserva
 
+
+@Dao
 interface PedidoDAO {
     @Query("select *from tb_Pedido")
+<<<<<<< HEAD
     suspend fun obtenerPedido():List<Pedido>
+=======
+    fun obtenerPedido(): Flow<List<Pedido>>
+>>>>>>> bf728291d3ce95a088e49deb82ca69f3569dd678
 
     @Query("select * from tb_Pedido where idPedido= :idPedido")
     suspend fun obtenerPedidoById(idPedido: Int): Pedido
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
+<<<<<<< HEAD
     suspend fun RegistrarPedido()
+=======
+    fun RegistrarPedido(idTipoPedido: Int,
+                        fechaHoraPedido: String,
+                        totalPedido:Int,
+                        idMetodoPago:Int,
+                        cod_Ubigeo:String,
+                        direccionPedido:String,
+                        estado:Int): Pedido
+>>>>>>> bf728291d3ce95a088e49deb82ca69f3569dd678
 
     @Update(onConflict = OnConflictStrategy.IGNORE)
     suspend fun ActualizarPedido(idTipoPedido: Int,
