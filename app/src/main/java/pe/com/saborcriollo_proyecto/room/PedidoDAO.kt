@@ -9,16 +9,16 @@ import pe.com.saborcriollo_proyecto.entity.Reserva
 
 interface PedidoDAO {
     @Query("select *from tb_Pedido")
-    fun obtenerPedido():List<Pedido>
+    suspend fun obtenerPedido():List<Pedido>
 
     @Query("select * from tb_Pedido where idPedido= :idPedido")
-    fun obtenerPedidoById(idPedido: Int): Pedido
+    suspend fun obtenerPedidoById(idPedido: Int): Pedido
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun RegistrarPedido()
+    suspend fun RegistrarPedido()
 
     @Update(onConflict = OnConflictStrategy.IGNORE)
-    fun ActualizarPedido(idTipoPedido: Int,
+    suspend fun ActualizarPedido(idTipoPedido: Int,
                          fechaHoraPedido: String,
                          totalPedido:Int,
                          idMetodoPago:Int,
@@ -27,5 +27,5 @@ interface PedidoDAO {
                          estado:Int): Pedido
 
     @Query("delete from tb_pedido where idPedido= :idPedido")
-    fun EliminarPedido(idPedido:Int): Pedido
+    suspend fun EliminarPedido(idPedido:Int): Pedido
 }
