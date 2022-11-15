@@ -7,20 +7,12 @@ import pe.com.saborcriollo_proyecto.entity.Pedido
 
 @Dao
 interface PedidoDAO {
-    @Query("select *from tb_Pedido")
-<<<<<<< HEAD
-    suspend fun obtenerPedido():List<Pedido>
-=======
-    fun obtenerPedido(): Flow<List<Pedido>>
->>>>>>> bf728291d3ce95a088e49deb82ca69f3569dd678
-
-    @Query("select * from tb_Pedido where idPedido= :idPedido")
-    suspend fun obtenerPedidoById(idPedido: Int): Pedido
+    @Query("select * from tb_Pedido order by idCliente")
+    suspend fun obtenerPedido(): Flow<List<Pedido>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-<<<<<<< HEAD
     suspend fun RegistrarPedido()
-=======
+
     fun RegistrarPedido(idTipoPedido: Int,
                         fechaHoraPedido: String,
                         totalPedido:Int,
@@ -28,7 +20,7 @@ interface PedidoDAO {
                         cod_Ubigeo:String,
                         direccionPedido:String,
                         estado:Int): Pedido
->>>>>>> bf728291d3ce95a088e49deb82ca69f3569dd678
+
 
     @Update(onConflict = OnConflictStrategy.IGNORE)
     suspend fun ActualizarPedido(idTipoPedido: Int,

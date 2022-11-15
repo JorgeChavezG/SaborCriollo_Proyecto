@@ -17,4 +17,17 @@ class PedidoViewModel (private val repositorio: PedidoRepositorio) : ViewModel()
             repositorio.insertar(pedido)
         }
     }
+
+    fun actualiza(pedido: Pedido) {
+        viewModelScope.launch {
+            repositorio.actualizar(pedido)
+        }
+    }
+
+    fun elimina(pedido: Pedido) {
+        viewModelScope.launch {
+            repositorio.eliminar(pedido)
+        }
+    }
 }
+
