@@ -127,18 +127,18 @@
         android:id="@+id/btn_comprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/btn_FinalizarCompra"
+        android:layout_marginTop="24dp"
         android:clickable="true"
+        android:text="@string/btn_FinalizarCompra"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_compra"
         app:layout_constraintTop_toBottomOf="@+id/btn_carrito2" />
 
     <CheckBox
         android:id="@+id/checkBox_compra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
         android:text="@string/Confirmar"
@@ -146,5 +146,16 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_comprar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_comidacriolla" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:paddingLeft="22dp"
+        android:text="@string/Generar_Reserva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBox_compra"
+        app:layout_constraintTop_toBottomOf="@+id/btn_comprar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

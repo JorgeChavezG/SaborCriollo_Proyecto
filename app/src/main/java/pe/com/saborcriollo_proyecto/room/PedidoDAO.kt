@@ -11,9 +11,17 @@ interface PedidoDAO {
     suspend fun obtenerPedido(): Flow<List<Pedido>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    suspend fun RegistrarPedido(idTipoPedido: Int,
+=======
+<<<<<<< HEAD
+>>>>>>> 309933037c3092a0d3b2a08db2b6b544586c2629
     suspend fun RegistrarPedido()
 
     fun RegistrarPedido(idTipoPedido: Int,
+>>>>>>> 686856386230eda75fe4e70f7a7e508b02e2d711
                         fechaHoraPedido: String,
                         totalPedido:Int,
                         idMetodoPago:Int,
