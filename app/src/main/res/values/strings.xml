@@ -65,6 +65,7 @@
         <string name="btn_AgregarAlCarrito">Agregar Al Carrito</string>
         <string name="btn_FinalizarCompra">Finalizar Compra</string>
         <string name="pollo_a_la_brasa_entero_con_papas_y_ensalada_precio_s_49_90">Pollo a la brasa entero con papas y ensalada Precio: S/.49.90</string>
+    <string name="Generar_Reserva">Generar Reserva</string>
 
 
         <!--     etiquetas Pago  -->
@@ -78,4 +79,9 @@
         <string name="btn_ConfimarPago">Confirmar Pago</string>
         <string name="btn_AnularPago">Anular Pago</string>
         <string name="men_criollo_l_v_precio_s_12_90">Menú criollo (L-V) Precio: S/.12.90</string>
+
+
+    <!-- etiquetas en registro-->
+
+    <string name="terminoCondiciones">Leer Términos y Condiciones</string>
     </resources>

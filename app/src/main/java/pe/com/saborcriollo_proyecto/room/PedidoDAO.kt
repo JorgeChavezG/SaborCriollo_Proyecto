@@ -14,7 +14,7 @@ interface PedidoDAO {
     fun obtenerPedidoById(idPedido: Int): Pedido
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun RegistrarPedido(idTipoPedido: Int,
+    suspend fun RegistrarPedido(idTipoPedido: Int,
                         fechaHoraPedido: String,
                         totalPedido:Int,
                         idMetodoPago:Int,
