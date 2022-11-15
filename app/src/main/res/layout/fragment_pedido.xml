@@ -64,7 +64,7 @@
         android:id="@+id/txt_pollobrasa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="40dp"
         android:text="@string/pollo_a_la_brasa_entero_con_papas_y_ensalada_precio_s_49_90"
@@ -79,23 +79,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/btn_AgregarAlCarrito"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_pollobrasa"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pollobrasa" />
+        android:text="@string/btn_AgregarAlCarrito"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_compra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_comidacriolla"
+        app:layout_constraintVertical_bias="0.51" />
 
     <ImageView
         android:id="@+id/img_comidacriolla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="TODO"
         android:src="@drawable/img_comidacriolla"
+        app:layout_constraintEnd_toStartOf="@+id/txt_comidacriolla"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_pollobrasa"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toBottomOf="@+id/img_pollobrasa" />
 
     <TextView
         android:id="@+id/txt_comidacriolla"
@@ -107,71 +110,58 @@
         android:text="@string/men_criollo_l_v_precio_s_12_90"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/img_comidacriolla"
-        app:layout_constraintTop_toBottomOf="@+id/btn_carrito1" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pollobrasa" />
 
     <Button
         android:id="@+id/btn_carrito2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/btn_AgregarAlCarrito"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="4dp"
         android:clickable="true"
+        android:text="@string/Eliminar_Pedido"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_comidacriolla"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toEndOf="@+id/btn_carrito1"
         app:layout_constraintTop_toBottomOf="@+id/txt_comidacriolla" />
 
     <Button
         android:id="@+id/btn_comprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
-        android:text="@string/btn_DetallePedido"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-=======
-        android:layout_marginTop="24dp"
-        android:clickable="true"
+        android:padding="9dp"
         android:text="@string/btn_FinalizarCompra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/checkBox_compra"
->>>>>>> ae7ba4c3672e33c6dab36cfa8eacc5230bd144ef
         app:layout_constraintTop_toBottomOf="@+id/btn_carrito2" />
 
-    <Button
-        android:id="@+id/btn_listarreserva"
+    <CheckBox
+        android:id="@+id/checkBox_compra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:text="@string/btn_ListarReserva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toEndOf="@+id/btn_retorno_1"
-        tools:layout_editor_absoluteY="32dp" />
-=======
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="68dp"
         android:text="@string/Confirmar"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_comprar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_comidacriolla" />
->>>>>>> ae7ba4c3672e33c6dab36cfa8eacc5230bd144ef
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:paddingLeft="22dp"
         android:text="@string/Generar_Reserva"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/checkBox_compra"
-        app:layout_constraintTop_toBottomOf="@+id/btn_comprar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
