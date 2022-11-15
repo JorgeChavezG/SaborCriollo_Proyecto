@@ -1,5 +1,6 @@
 package pe.com.saborcriollo_proyecto.ui.fragment
 
+<<<<<<< HEAD
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -57,4 +58,12 @@ class PagoFragment : Fragment() {
                 }
             }
     }
+=======
+import androidx.fragment.app.Fragment
+
+
+class PagoFragment : Fragment() {
+
+
+>>>>>>> ae7ba4c3672e33c6dab36cfa8eacc5230bd144ef
 }
