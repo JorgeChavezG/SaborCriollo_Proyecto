@@ -5,11 +5,13 @@ import pe.com.saborcriollo_proyecto.room.UsuarioDAO
 
 class UsuarioRepositorio  (private val objUsuario : UsuarioDAO){
 
+    val todosLosUsuarios = objUsuario.obtenerUsuario()
+
     suspend fun insertar (usuario:Usuario){
-        objUsuario.RegistrarUsuario("jorge10009@hotmail.com"," 123456")
+        objUsuario.RegistrarUsuario(usuario)
     }
     suspend fun obtener (usuario: Usuario){
-        objUsuario.obtenerUsuario("")
+        objUsuario.obtenerCorreoAndClave("","")
     }
 
 }

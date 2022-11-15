@@ -47,8 +47,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_login" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/id_nombre_usuario"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_nombreusuario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -60,9 +60,14 @@
         app:layout_constraintBottom_toTopOf="@+id/txt_correo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtview_tituloregistro" />
-
+        app:layout_constraintTop_toBottomOf="@+id/txtview_tituloregistro">
     <com.google.android.material.textfield.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txt_correo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -75,9 +80,14 @@
         app:layout_constraintBottom_toTopOf="@+id/txt_contrasena"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_nombre_usuario" />
-
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombreusuario">
     <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txt_contrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -90,7 +100,12 @@
         app:layout_constraintBottom_toTopOf="@+id/checkBox_terminos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_correo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_correo" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/checkBox_terminos"

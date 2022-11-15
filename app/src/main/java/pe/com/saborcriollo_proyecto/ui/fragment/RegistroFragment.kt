@@ -5,56 +5,74 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import pe.com.saborcriollo_proyecto.R
+import pe.com.saborcriollo_proyecto.databinding.FragmentRegistroBinding
+import pe.com.saborcriollo_proyecto.entity.Usuario
+import pe.com.saborcriollo_proyecto.ui.viewmodel.ProductoViewModel
+import pe.com.saborcriollo_proyecto.ui.viewmodel.UsuarioApplication
+import pe.com.saborcriollo_proyecto.ui.viewmodel.UsuarioViewModel
+import pe.com.saborcriollo_proyecto.ui.viewmodel.ViewModelFactory
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RegistroFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RegistroFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var _binding : FragmentRegistroBinding? = null
+    val binding get() = _binding !!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+    private val usuarioViewModel : UsuarioViewModel by viewModels {
+        val usuarioApp = requireActivity().application as UsuarioApplication
+    ViewModelFactory(usuarioApp.repositorio)
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro, container, false)
+        _binding = FragmentRegistroBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RegistroFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RegistroFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btnRegistrar.setOnClickListener {
+            val correo = binding.txtCorreo.editText?.text.toString()
+            if(correo.isEmpty()){
+                binding.txtCorreo.error = "Campo Requerido"
+                return@setOnClickListener
+            }else if (correo.length <10){
+                binding.txtCorreo.error = "Campo Incompleto"
+                return@setOnClickListener
             }
+            val nomusu = binding.txtNombreusuario.editText?.text.toString()
+            if(nomusu.isEmpty()){
+                binding.txtNombreusuario.error = "Campo requerido"
+                return@setOnClickListener
+            }
+            val contraseña = binding.txtContrasena.editText?.text.toString()
+            if(contraseña.isEmpty()){
+                binding.txtContrasena.error = "Campo requerido"
+                return@setOnClickListener
+
+            }else if (contraseña.length < 3){
+                binding.txtContrasena.error = "Contraseña muy corta"
+                return@setOnClickListener
+            }
+
+        val usu = Usuario(correo= correo, nombre = nomusu, clave = contraseña)
+
+            usuarioViewModel.inserta(usu)
+
+            val directions = RegistroFragmentDirections.actionRegistroFragmentToLoginFragment()
+            findNavController().navigate(directions)
     }
-}
+        }
+    }
+
