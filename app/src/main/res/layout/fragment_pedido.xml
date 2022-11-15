@@ -131,18 +131,8 @@
         android:id="@+id/btn_comprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-        android:layout_marginTop="48dp"
-        android:clickable="true"
-        android:text="@string/btn_DetallePedido"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-=======
-        android:layout_marginTop="24dp"
-=======
         android:layout_marginStart="57dp"
         android:layout_marginTop="32dp"
->>>>>>> 466801f5ff407775f30d686f5ac329c01dcff912
         android:clickable="true"
         android:padding="9dp"
         android:text="@string/btn_FinalizarCompra"
@@ -154,16 +144,6 @@
         android:id="@+id/checkBox_compra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
-
-        android:text="@string/btn_ListarReserva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
-        app:layout_constraintStart_toEndOf="@+id/btn_retorno_1"
-        tools:layout_editor_absoluteY="32dp" />
-
-=======
->>>>>>> 466801f5ff407775f30d686f5ac329c01dcff912
         android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="68dp"
@@ -171,13 +151,7 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_comprar"
-<<<<<<< HEAD
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_comidacriolla" />
-
-=======
         app:layout_constraintStart_toStartOf="parent" />
->>>>>>> 466801f5ff407775f30d686f5ac329c01dcff912
 
     <Button
         android:id="@+id/button2"

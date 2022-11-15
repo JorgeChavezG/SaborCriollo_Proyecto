@@ -24,9 +24,9 @@ class PedidoViewModel (private val pedidorepositorio: PedidoRepositorio) : ViewM
         }
     }
 
-    fun elimina(pedido: Pedido) {
+    fun elimina(idPedido:Int) {
         viewModelScope.launch {
-            pedidorepositorio.eliminar(pedido)
+            pedidorepositorio.eliminar(idPedido)
         }
     }
 }
