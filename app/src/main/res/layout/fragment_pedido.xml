@@ -127,7 +127,6 @@
         android:id="@+id/btn_comprar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginTop="48dp"
         android:clickable="true"
         android:text="@string/btn_DetallePedido"
@@ -146,13 +145,13 @@
         android:id="@+id/btn_listarreserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+
         android:text="@string/btn_ListarReserva"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.836"
         app:layout_constraintStart_toEndOf="@+id/btn_retorno_1"
         tools:layout_editor_absoluteY="32dp" />
-=======
+
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="8dp"
@@ -161,7 +160,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_comprar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_comidacriolla" />
->>>>>>> ae7ba4c3672e33c6dab36cfa8eacc5230bd144ef
+
 
     <Button
         android:id="@+id/button2"

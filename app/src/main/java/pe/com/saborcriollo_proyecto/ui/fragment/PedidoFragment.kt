@@ -49,18 +49,18 @@ class PedidoFragment : Fragment() {
         }
 
         binding.btnCarrito1.setOnClickListener {
-            val pedido = Pedido(idCliente = 1, idTipoPedido = 1, fechaHoraPedido = "2022-09-05 12:30:00",
+            val pedido = Pedido(idUsuario = 1, idTipoPedido = 1, fechaHoraPedido = "2022-09-05 12:30:00",
                 totalPedido = 60.80, idMetodoPago = 1, cod_Ubigeo = "001", direccionPedido = "Calle Los Alhelies 341", estado = 1)
             pedidoViewModel.inserta(pedido)
         }
 
         binding.btnCarrito2.setOnClickListener {
-            val pedido = Pedido(idCliente = 2, idTipoPedido = 2, fechaHoraPedido = "2022-08-04 11:35:00",
+            val pedido = Pedido(idUsuario = 2, idTipoPedido = 2, fechaHoraPedido = "2022-08-04 11:35:00",
                 totalPedido = 37.80, idMetodoPago = 2, cod_Ubigeo = "002", direccionPedido = "Calle Los Geranios 221", estado = 2)
             pedidoViewModel.inserta(pedido)
         }
 
-        binding.btnComprar.setOnClickListener {
+        binding.btnCarrito1.setOnClickListener {
         }
     }
 

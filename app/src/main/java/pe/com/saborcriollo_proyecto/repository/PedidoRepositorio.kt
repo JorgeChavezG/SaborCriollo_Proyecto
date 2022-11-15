@@ -12,10 +12,10 @@ class PedidoRepositorio (private val dao: PedidoDAO){
     }
 
     suspend fun actualizar(pedido: Pedido){
-        dao.ActualizarPedido(Pedido)
+        dao.ActualizarPedido(pedido)
     }
 
-    suspend fun eliminar(pedido: Pedido){
-        dao.EliminarPedido(pedido)
+    suspend fun eliminar(idPedido:Int){
+        dao.EliminarPedido(idPedido)
     }
 }
