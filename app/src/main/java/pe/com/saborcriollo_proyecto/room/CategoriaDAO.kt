@@ -7,7 +7,7 @@ import pe.com.saborcriollo_proyecto.entity.Categoria
 @Dao
 interface CategoriaDAO {
     @Query("Select*from tb_Categoria")
-    fun obtenerCategia(): List<Categoria>
+    suspend fun obtenerCategia(): List<Categoria>
 
 
 }

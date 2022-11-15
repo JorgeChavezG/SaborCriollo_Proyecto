@@ -11,13 +11,13 @@ interface  ComprobantePagoDAO {
     fun obtenerComprobantePago():List<ComprobantePago>
 
     @Query("select * from tb_comprobantepago where TipoComprobante= :TipoComprobante")
-    fun obtenerPedidoById(TipoComprobante: String): ComprobantePago
+    suspend fun obtenerPedidoById(TipoComprobante: String): ComprobantePago
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun RegistrarPedido()
+    suspend fun RegistrarPedido()
 
     @Update(onConflict = OnConflictStrategy.IGNORE)
-    fun ActualizarPedido(idTipoPedido: Int,
+    suspend fun ActualizarPedido(idTipoPedido: Int,
                          fechaHoraPedido: String,
                          totalPedido:Int,
                          idMetodoPago:Int,
@@ -26,5 +26,5 @@ interface  ComprobantePagoDAO {
                          estado:Int): Pedido
 
     @Query("delete from tb_comprobantepago where idPedido= :idPedido")
-    fun EliminarPedido(idPedido:Int): Pedido
+    suspend fun EliminarPedido(idPedido:Int): Pedido
 }
