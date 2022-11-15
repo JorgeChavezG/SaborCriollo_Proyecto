@@ -7,9 +7,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "tb_Pedido",
     foreignKeys = [
-        ForeignKey(entity = Cliente::class,
+        ForeignKey(entity = Usuario::class,
             parentColumns = ["name"],
-            childColumns = ["idCliente"]),
+            childColumns = ["idUsuario"]),
         ForeignKey(entity = TipoPedido::class,
             parentColumns = ["name"],
             childColumns = ["idTipoPedido"]),
@@ -24,8 +24,8 @@ import androidx.room.PrimaryKey
     @PrimaryKey
     @ColumnInfo(name = "idPedido")
     val idPedido: Int = 0,
-    @ColumnInfo(name = "idCliente") /*foreign key*/
-    val idCliente: Int,
+    @ColumnInfo(name = "idUsuario") /*foreign key*/
+    val idUsuario: Int,
     @ColumnInfo(name = "idTipoPedido") /*foreign key*/
     val idTipoPedido: Int,
     @ColumnInfo(name = "fechaHoraPedido")
@@ -40,12 +40,17 @@ import androidx.room.PrimaryKey
     val direccionPedido: String,
     @ColumnInfo(name = "estado")
     val estado: Int
+<<<<<<< HEAD
 ) {
     override fun toString(): String {
-        return "Pedido(idPedido=$idPedido, idCliente=$idCliente, idTipoPedido=$idTipoPedido, " +
+        return "Pedido(idPedido=$idPedido, idUsuario=$idUsuario, idTipoPedido=$idTipoPedido, " +
                 " fechaHoraPedido=$fechaHoraPedido, totalPedido=$totalPedido ,idMetodoPago=$idMetodoPago, " +
                 " cod_Ubigeo='$cod_Ubigeo', direccionPedido='$direccionPedido', estado=$estado)"
     }
 }
 /*):java.io.Serializable {
 }*/
+=======
+):java.io.Serializable {
+}
+>>>>>>> ae7ba4c3672e33c6dab36cfa8eacc5230bd144ef

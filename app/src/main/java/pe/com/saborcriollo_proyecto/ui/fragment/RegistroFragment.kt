@@ -1,4 +1,4 @@
-package pe.com.saborcriollo_proyecto.ui.adapter
+package pe.com.saborcriollo_proyecto.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -70,7 +70,7 @@ class RegistroFragment : Fragment() {
 
             usuarioViewModel.inserta(usu)
 
-            val directions = RegistroFragmentDirections.actionRegistroFragmentToListaFragment()
+            val directions = RegistroFragmentDirections.actionRegistroFragmentToLoginFragment()
             findNavController().navigate(directions)
     }
         }

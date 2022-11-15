@@ -4,28 +4,22 @@ import androidx.room.*
 
 @Entity(tableName = "tb_Reserva",
     foreignKeys = [
-        ForeignKey(entity = Local::class,
-            parentColumns = ["name"],
-            childColumns = ["idLocal"])
-    ],
+        ForeignKey( entity = Local::class,
+                    parentColumns = ["name"],
+                    childColumns = ["idLocal"]),
+        ForeignKey( entity = Usuario::class,
+                    parentColumns = ["name"],
+                    childColumns = ["idUsuario"])],
     indices = [
         Index(value = ["idLocal"])])
 class Reserva (
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "idReserva")
     val idReserva: Int,
     @ColumnInfo(name = "idLocal") /*foreign key*/
     val idLocal: Int,
-    @ColumnInfo(name = "nombreCliente")
-    val nombreCliente: String,
-    @ColumnInfo(name = "apellidoCliente")
-    val apellidoCliente: String,
-    @ColumnInfo(name = "documento")
-    val documento: String,
-    @ColumnInfo(name = "correoCliente")
-    val correoCliente: String,
-    @ColumnInfo(name = "telefono")
-    val telefono: String,
+    @ColumnInfo(name = "idUsuario") /*foreign key*/
+    val idUsuario: Int,
     @ColumnInfo(name = "fechaReserva")
     val fechaReserva: String,
     @ColumnInfo(name = "horaReserva")

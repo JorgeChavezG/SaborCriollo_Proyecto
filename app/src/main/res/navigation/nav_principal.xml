@@ -7,7 +7,45 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="pe.com.saborcriollo_proyecto.ui.adapter.LoginFragment"
+        android:name="pe.com.saborcriollo_proyecto.ui.fragment.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_pedidoFragment"
+            app:destination="@id/pedidoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="pe.com.saborcriollo_proyecto.ui.fragment.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidoFragment"
+        android:name="pe.com.saborcriollo_proyecto.ui.fragment.PedidoFragment"
+        android:label="fragment_pedido"
+        tools:layout="@layout/fragment_pedido" >
+        <action
+            android:id="@+id/action_pedidoFragment_to_pagoFragment"
+            app:destination="@id/pagoFragment" />
+        <action
+            android:id="@+id/action_pedidoFragment_to_reservaFragment"
+            app:destination="@id/reservaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagoFragment"
+        android:name="pe.com.saborcriollo_proyecto.ui.fragment.PagoFragment"
+        android:label="fragment_pago"
+        tools:layout="@layout/fragment_pago" />
+    <fragment
+        android:id="@+id/reservaFragment"
+        android:name="pe.com.saborcriollo_proyecto.ui.fragment.ReservaFragment"
+        android:label="fragment_reserva"
+        tools:layout="@layout/fragment_reserva" />
 </navigation>

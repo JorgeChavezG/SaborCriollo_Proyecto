@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.adapter.RegistroFragment">
+    tools:context=".ui.fragment.RegistroFragment">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_retorno_1"
@@ -115,7 +115,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="134dp"
         android:layout_marginBottom="8dp"
-        android:text="Leer Términos y Condiciones"
+        android:minHeight="48dp"
+        android:text="@string/terminoCondiciones"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btn_registrar"
         app:layout_constraintEnd_toEndOf="parent"

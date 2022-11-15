@@ -1,4 +1,4 @@
-package pe.com.saborcriollo_proyecto.ui.adapter
+package pe.com.saborcriollo_proyecto.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,32 +6,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import pe.com.saborcriollo_proyecto.databinding.FragmentPedidoBinding
+import pe.com.saborcriollo_proyecto.databinding.FragmentDetallePedidoBinding
 import pe.com.saborcriollo_proyecto.entity.Pedido
 import pe.com.saborcriollo_proyecto.ui.viewmodel.PedidoApplication
 import pe.com.saborcriollo_proyecto.ui.viewmodel.PedidoViewModel
 import pe.com.saborcriollo_proyecto.ui.viewmodel.ViewModelFactory
 
-
-class PedidoFragment : Fragment() {
-
-    private var _binding: FragmentPedidoBinding? = null
+class DetallePedidoFragment : Fragment() {
+    private var _binding: FragmentDetallePedidoBinding? = null
     val binding get() = _binding!!
 
     private val pedidoViewModel: PedidoViewModel by viewModels {
-
         val saborcriolloApp = requireActivity().application as PedidoApplication
 
         ViewModelFactory(saborcriolloApp.repository)
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentPedidoBinding.inflate(inflater, container, false)
+        _binding = FragmentDetallePedidoBinding.inflate(inflater, container, false)
         return binding.root
     }
 

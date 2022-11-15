@@ -6,10 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import pe.com.saborcriollo_proyecto.entity.*
 
-
 @Database(
     entities = [Categoria::class,
-                Cliente::class,
                 ComprobantePago::class,
                 DetallePedido::class,
                 Local::class,
@@ -27,8 +25,17 @@ import pe.com.saborcriollo_proyecto.entity.*
 )
 abstract class BDSaborCriollo : RoomDatabase(){
     abstract fun pedidoDao(): PedidoDAO
+
     abstract fun UsuarioDAO(): UsuarioDAO
 
+
+
+    abstract fun categoriaDao(): CategoriaDAO
+    abstract fun clienteDao(): ClienteDAO
+    abstract fun comprobantepagoDao(): ComprobantePagoDAO
+    abstract fun detallepedidoDao(): DetallePedidoDAO
+    abstract fun reservaDao(): ReservaDAO
+    abstract fun usuarioDao(): UsuarioDAO
 
 
     companion object{
