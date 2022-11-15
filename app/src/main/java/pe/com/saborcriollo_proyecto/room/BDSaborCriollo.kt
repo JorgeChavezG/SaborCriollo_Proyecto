@@ -27,6 +27,7 @@ import pe.com.saborcriollo_proyecto.entity.*
 )
 abstract class BDSaborCriollo : RoomDatabase(){
     abstract fun pedidoDao(): PedidoDAO
+    abstract fun UsuarioDAO(): UsuarioDAO
 
 
 
