@@ -20,12 +20,14 @@ class RegistroFragment : Fragment() {
     private var _binding : FragmentRegistroBinding? = null
     val binding get() = _binding !!
 
-    private val usuarioViewModel : UsuarioViewModel by viewModels {
+  /*  private val usuarioViewModel : UsuarioViewModel by viewModels {
         val usuarioApp = requireActivity().application as UsuarioApplication
     ViewModelFactory(usuarioApp.repositorio)
 
     }
 
+
+   */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -66,9 +68,9 @@ class RegistroFragment : Fragment() {
                 return@setOnClickListener
             }
 
-        val usu = Usuario(correo= correo, nombre = nomusu, clave = contraseña)
+      //  val usu = Usuario(correo= correo, nombre = nomusu, clave = contraseña)
 
-            usuarioViewModel.inserta(usu)
+        //    usuarioViewModel.inserta(usu)
 
             val directions = RegistroFragmentDirections.actionRegistroFragmentToLoginFragment()
             findNavController().navigate(directions)

@@ -15,7 +15,12 @@ class PedidoRepositorio (private val dao: PedidoDAO){
         dao.ActualizarPedido(pedido)
     }
 
+<<<<<<< HEAD
     suspend fun eliminar(idPedido:Int){
         dao.EliminarPedido(idPedido)
+=======
+    suspend fun eliminar(pedido: Pedido){
+        dao.EliminarPedido(idPedido = 1)
+>>>>>>> 466801f5ff407775f30d686f5ac329c01dcff912
     }
 }

@@ -31,7 +31,6 @@ abstract class BDSaborCriollo : RoomDatabase(){
 
 
     abstract fun categoriaDao(): CategoriaDAO
-    abstract fun clienteDao(): ClienteDAO
     abstract fun comprobantepagoDao(): ComprobantePagoDAO
     abstract fun detallepedidoDao(): DetallePedidoDAO
     abstract fun reservaDao(): ReservaDAO
